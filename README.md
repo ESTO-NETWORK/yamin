@@ -1,4 +1,4 @@
-## 야민정음 변환 서비스(Yamin)  
+## 야민정음 변환 서비스 (Yamin)  
 [![GitHub license](https://img.shields.io/github/license/ESTO-NETWORK/yamin?style=for-the-badge)](https://github.com/ESTO-NETWORK/yamin/blob/master/LICENSE)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ESTO-NETWORK/yamin?style=for-the-badge)
 [![GitHub issues](https://img.shields.io/github/issues/ESTO-NETWORK/yamin?style=for-the-badge)](https://github.com/ESTO-NETWORK/yamin/issues)
@@ -7,3 +7,12 @@
 ~~~
 주요 야민정음 패턴을 적용해 사용자가 입력한 문장을 야민정음체로 변환합니다.
 ~~~
+
+## 주요 기능
+
+## 시스템 구성도
+
+## 적용 기술
+
+## 참고 사이트
+📙 [야민정음 나무위키](https://namu.wiki/w/%EC%95%BC%EB%AF%BC%EC%A0%95%EC%9D%8C)  
