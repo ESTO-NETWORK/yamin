@@ -16,3 +16,4 @@
 
 ## 참고 사이트
 📙 [야민정음 나무위키](https://namu.wiki/w/%EC%95%BC%EB%AF%BC%EC%A0%95%EC%9D%8C)  
+📘 [Unicode 13.0 Character Code Charts (Hangul Jamo, Hangul Syllables)](http://www.unicode.org/charts/)
