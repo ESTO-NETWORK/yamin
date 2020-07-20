@@ -2,4 +2,5 @@
 __pycache__
 
 # 가상환경 만들기 "python -m venv venv"
+# 가상환경 실행하기 "source venv/Scripts/activate"
 /venv
