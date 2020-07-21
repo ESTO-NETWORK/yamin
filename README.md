@@ -5,10 +5,13 @@
 [![GitHub stars](https://img.shields.io/github/stars/ESTO-NETWORK/yamin?style=for-the-badge)](https://github.com/ESTO-NETWORK/yamin/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/ESTO-NETWORK/yamin?style=for-the-badge)](https://github.com/ESTO-NETWORK/yamin/network) 
 ~~~
-주요 야민정음 패턴을 적용해 사용자가 입력한 문장을 야민정음체로 변환합니다.
+- 주요 야민정음 패턴을 적용해 사용자가 입력한 문장을 야민정음체로 변환합니다.
 ~~~
 
 ## 주요 기능
+~~~
+- 한글 완성자 문자열 야민정음체로 변환
+~~~
 
 ## 시스템 구성도
 
