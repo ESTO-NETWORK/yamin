@@ -2,11 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>야민정음 beta v0.1</title>
 </head>
 <body>
-<label for="source_string">Source string</label><textarea name="source_string" id="source_string" cols="30" rows="10"></textarea>
-<label for="result_string">Result string</label><textarea name="result_string" id="result_string" cols="30" rows="10"></textarea>
-<button>클립보드로 복사</button>
+    <!-- ui는 수정 예정!!! -경록- -->
+    <label for="source_string">변환할 글자를 입력하세요!!</label>
+    <br><textarea name="source_string" id="source_string" cols="30" rows="10" onkeyup="javascript:print_result(this.value)"></textarea>
+    <br><label for="result_string">결과 : </label>
+    <br><textarea name="result_string" id="result_string" cols="30" rows="10"></textarea>
+    <br><button onclick="javascript:copy()">결과를 클립보드에 복사</button>
+
+    <script>
+        function print_result(obj){
+            obj += "!!";
+            document.getElementById("result_string").value = obj;
+        }
+        
+        function copy(){
+            const text = document.getElementById("result_string");
+            text.select();
+            document.execCommand("copy");
+            alert("클립보드에 복사 되었습니다.");
+        }
+    </script>
 </body>
 </html>
