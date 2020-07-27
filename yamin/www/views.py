@@ -19,7 +19,7 @@ class IndexView(View):
         return render(request, 'www/index.html')
 
 
-# 한글 완성자 문자열 초성, 중성, 종성으로 분리하는 함수
+# 한글 완성자 문자열 초성, 중성, 종성으로 분리하는 함수 (평윤)
 def hangul_split(txt):
     """
     - Hangul Jamo Unicode = 자음, 모음 영역 (0x1100 ~ 0x11FF)
