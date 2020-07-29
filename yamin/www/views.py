@@ -20,6 +20,7 @@ class IndexView(View):
 
 
 # 한글 완성자 문자열 초성, 중성, 종성으로 분리하는 함수 (평윤)
+# (ex) result = [['ㅎ','ㅏ','ㄴ'],['ㄱ','ㅡ','ㄹ']]
 def hangul_split(txt):
     """
     - Hangul Jamo Unicode = 자음, 모음 영역 (0x1100 ~ 0x11FF)
@@ -47,7 +48,12 @@ def hangul_split(txt):
         jong = temp % 28  # 종성 값 추출
 
         # 한글 완성자의 요소 뜯어 리스트로 저장
-        # (ex) result = [['ㅎ','ㅏ','ㄴ'],['ㄱ','ㅡ','ㄹ']]
         result.append([hangul_cho[cho], hangul_jung[jung], hangul_jong[jong]])
 
     return result
+
+# 한글 완성자 한 글자씩 분리하는 함수 (평윤)
+# (ex) result = ['한','글']
+def letter_split(txt):
+    rtxt = re.sub(r'[^가-힣]', '', txt)  # 한글 완성자만 남김 (다른 문자 요소[영어, 숫자 등] 다 소거)
+    return [rtxt[i] for i in range(len(rtxt))] # 문자별로 글자 분리 작업 loop
