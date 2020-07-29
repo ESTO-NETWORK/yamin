@@ -57,3 +57,20 @@ def hangul_split(txt):
 def letter_split(txt):
     rtxt = re.sub(r'[^가-힣]', '', txt)  # 한글 완성자만 남김 (다른 문자 요소[영어, 숫자 등] 다 소거)
     return [rtxt[i] for i in range(len(rtxt))] # 문자별로 글자 분리 작업 loop
+
+# 야민정음 변환 함수[글자 치환] (평윤)
+def trans_letter(rtxt):
+    # 글자로 문장 쪼개기
+    result = letter_split(txt)
+
+    # 노가다로 글자 치환
+    for i in range(len(result)):
+        # 대 ↔ 머
+        if result[i] == '대': result[i] = '머'
+        elif result[i] =='머': result[i] = '대'
+
+        # 댕 ↔ 멍
+        if result[i] == '댕': result[i] = '멍'
+        elif result[i] =='멍': result[i] = '댕'
+
+    return result
