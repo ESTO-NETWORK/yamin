@@ -6,7 +6,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/ESTO-NETWORK/yamin?style=for-the-badge)](https://github.com/ESTO-NETWORK/yamin/network) 
 ~~~
 - 주요 야민정음 패턴을 적용해 사용자가 입력한 문장을 야민정음체로 변환합니다.
-- 변환된 텍스트를 클립보드로 복사할 수 있습니다.
+- 변환된 텍스트를 클립보드로 복사해 공유할 수 있습니다.
 ~~~
 
 ## 주요 기능
