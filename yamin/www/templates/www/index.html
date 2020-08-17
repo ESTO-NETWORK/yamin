@@ -1,16 +1,19 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>야민정음 beta v0.1</title>
-    <link rel="stylesheet" href="css/js-snackbar.css">
-    <script src="js/js-snackbar.js"></script>
+    <link rel="stylesheet" href="{% static 'css/js-snackbar.css' %}">
 </head>
 <body>
+    <script src="{% static 'js/js-snackbar.js' %}"></script>
+
     <!-- ui는 수정 예정!!! -경록- -->
     <label for="source_string">변환할 글자를 입력하세요!!</label>
     {#    todo request delay 적용 필요  #}
-    <br><textarea name="source_string" id="source_string" cols="30" rows="10" onkeyup="fetch_translate(this.value)"></textarea>
+    <br><textarea name="source_string" id="source_string" cols="30" rows="10"></textarea>
+    <br><button id="translate_btn" onclick="fetch_translate(this.value)">야민정음으로 변환.</button>
     <br><label for="result_string">결과 : </label>
     <br><textarea name="result_string" id="result_string" cols="30" rows="10"></textarea>
     <br><button onclick="copy()">결과를 클립보드에 복사</button>
@@ -34,6 +37,7 @@
     }
 
     function fetch_translate(obj) {
+        // 야민정음 변환 함수 구현 필요함..
         fetch('get_split_korean', {
             method: 'post',
             mode: 'cors',
@@ -49,11 +53,12 @@
             function (res) {
                 res.json().then(
                     function (text) {
+                        // 입력한 글자를 야민정음 변환 함수로 넘겨서 받는 부분
                         document.getElementById("result_string").value = text['translate_result'];
                     })
         })
         .catch(
-            
+
         )
     }
 
@@ -62,11 +67,14 @@
         const text = document.getElementById("result_string");
         text.select();
         document.execCommand("copy");
-        new Snackbar({
-            message: "클립보드에 복사 되었습니다.",
-            status: "success",
-            timeout: 3000
-        });
+        (function() {
+            SnackBar({
+                message: "클립보드에 복사 되었습니다.",
+                status: "success",
+                timeout: 3000
+            })
+        })();
+        
     }
 
 
