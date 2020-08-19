@@ -6,18 +6,36 @@
     <title>야민정음 beta v0.1</title>
     <link rel="stylesheet" href="{% static 'css/js-snackbar.css' %}">
 </head>
+<style>
+    div#title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#contents{
+        margin:0 auto;
+        text-align: center;
+    }
+
+</style>
 <body>
     <script src="{% static 'js/js-snackbar.js' %}"></script>
 
     <!-- ui는 수정 예정!!! -경록- -->
-    <h5>야 민 정 음</h5>
-    <label for="source_string">변환할 글자를 입력하세요!!</label>
-    {#    todo request delay 적용 필요  #}
-    <br><textarea name="source_string" id="source_string" cols="30" rows="10"></textarea>
-    <br><button id="translate_btn" onclick="fetch_translate(this.value)">야민정음으로 변환.</button>
-    <br><label for="result_string">결과 : </label>
-    <br><textarea name="result_string" id="result_string" cols="30" rows="10"></textarea>
-    <br><button onclick="copy()">결과를 클립보드에 복사</button>
+    <!-- 얘들아 살아있니?..-->
+    <div id="title">
+        <h1>야 민 정 음</h1><h4>(이라 쓰고 망한 프로젝트라고 말함)</h4>
+    </div>
+    <div id="contents">
+        <label for="source_string">변환할 글자를 입력하세요!!</label>
+        {#    todo request delay 적용 필요  #}
+        <br><textarea name="source_string" id="source_string" cols="30" rows="10"></textarea>
+        <br><button id="translate_btn" onclick="fetch_translate(this.value)">야민정음으로 변환.</button>
+        <br><textarea name="result_string" id="result_string" cols="30" rows="10"></textarea>
+        <br><button onclick="copy()">결과를 클립보드에 복사</button>
+    </div>
+        
 
 <script>
 
